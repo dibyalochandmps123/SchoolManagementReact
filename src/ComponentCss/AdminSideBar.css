@@ -1,0 +1,143 @@
+.admin-side-bar{
+    height:100vh;
+    width:250px;
+    background-color:white;
+    border-right:.5px solid #ccc;
+    box-shadow: 3px 0 9px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width:250px;
+    overflow:scroll;
+    scrollbar-width:none;
+}
+.admin-side-bar-top{
+    display:flex;
+    justify-content:right;
+    align-items: center;
+    height:120px;
+}
+.admin-sidebar-close-btn {
+    display: none;
+}
+.admin-sidebar-close-btn .i{
+    margin-top:-50px;
+}
+.admin-side-header{
+    height:120px;
+    width:100%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.admin-side-header img{
+    height:70px;
+}
+.admin-side-header h3{
+    font-size:x-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:800;
+    margin: 0;
+}
+.admin-pt-name{
+    height:70px;
+    width:100%;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    gap:10px;
+    padding-left:20px;
+}
+.admin-profile-circle{
+    font-size:35px;
+}
+.admin-pt-nm-h6 h6{
+    font-size:15px;
+    font-weight:680;
+    margin: 0;
+    padding: 0;
+}
+.admin-pt-nm-h6 span{
+    font-size:13px;
+    font-weight:700;
+    background-color: #dc3545;
+    color: white;
+    padding:1px 7.8px;
+    border-radius:4px;
+}
+.admin-side-list{
+    width:100%;
+    height:auto;
+    
+}
+.admin-side-list li{
+    height:50px;
+    padding-left: 20px;
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.admin-side-list li:hover{
+    background-color:rgba(216, 231, 255, 0.562);
+    color: rgb(33, 149, 245);
+}
+.admin-side-list-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:25px;
+}
+.admin-side-list-item{
+    font-size:15px;
+    margin-left: 10px;
+}
+.admin-list-accounts{
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.admin-list-accounts>span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-list-accounts p{
+    margin:0;
+    padding:5px 0 5px 40px;
+    width:100%;
+    font-size:13px;
+    display:flex;
+    justify-content:left;
+    align-items: center;
+}
+.active-li{
+    background-color: #a1d1fd8c;
+    border-left: 4px solid #2c92ff;
+    font-weight:700;
+    color: rgb(33, 149, 245);
+}
+
+@media(max-width:768px){
+    .admin-side-bar{
+        position: absolute;
+        overflow: scroll;
+        z-index: 1000;
+        transform: translateX(-260px); /* Start off-screen */
+        transition: transform 0.5s ease;
+    }
+    .admin-side-bar.visible {
+        transform: translateX(0);
+        margin-left: 0;
+    }
+    .admin-sidebar-close-btn {
+        display: flex;
+        justify-content: center;
+        width:50px;
+        font-size: 40px;
+    }
+
+
+}
