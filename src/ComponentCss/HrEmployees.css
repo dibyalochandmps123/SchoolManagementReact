@@ -1,0 +1,25 @@
+.table-responsive {
+  overflow-x: auto;
+}
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+input.form-control:focus {
+  box-shadow: none;
+  border-color: #86b7fe;
+}
+@media(max-width:567px){
+  .hr-employees-search-bar {
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .hr-employees-search-bar-item {
+    width:100%;
+    transition: all 0.3s ease-in-out;
+    margin: 0 auto;
+  }
+}
